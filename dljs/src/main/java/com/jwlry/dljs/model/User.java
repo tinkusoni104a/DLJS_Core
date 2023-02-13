@@ -7,6 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.jwlry.dljs.dto.AuditLogDTO;
+
 import lombok.Data;
 
 //@Getter
@@ -21,53 +25,55 @@ public class User {
 
 	@Id
 	@Column(name = "USER_ID")
-	String userId;
+	private String userId;
 
 	@Column(name = "USER_NAME")
-	String userName;
-	
+	private String userName;
+
 	@Column(name = "EMAIL")
-	String email;
-	
+	private String email;
+
 	@Column(name = "ISO_CODE")
-	int isoCode;
-	
+	private int isoCode;
+
 	@Column(name = "MOBILE_NO")
-	int mobileNo;
-	
+	private long mobileNo;
+
 	@Column(name = "PASSWORD")
-	String password;
-	
+	private String password;
+
 	@Column(name = "ROLE")
-	String role;
+	private String role;
+
+	@Column(name = "USER_STATUS")
+	private String userStatus;
+	
+//	@Autowired
+//	private AuditLogDTO auditLogDTO;
 	
 	@Column(name = "RECORD_STAT")
-	char recordStat;
-	
+	private String recordStat;
+
 	@Column(name = "AUTH_STAT")
-	char authStat;
-	
+	private char authStat;
+
 	@Column(name = "MOD_NO")
-	int modNo;
-	
+	private int modNo;
 
 	@Column(name = "MAKER_ID")
-	String makerId;
-	
+	private String makerId;
 
 	@Column(name = "MAKER_DT_STAMP")
-	Date makerDtStamp;
-	
+	private Date makerDtStamp;
 
 	@Column(name = "CHECKER_ID")
-	String checkerId;
-	
+	private String checkerId;
 
 	@Column(name = "CHECKER_DT_STAMP")
-	Date checkerDtStamp;
-	
+	private Date checkerDtStamp;
+
 	@Column(name = "ONCE_AUTH")
-	char onceAuth;
-	
-	
+	private char onceAuth;
+
+
 }
